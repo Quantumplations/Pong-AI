@@ -48,7 +48,7 @@ class Ball:
     COLOR = WHITE
 
     def __init__(self, x, y, radius):
-        self.x = self.original_x =  x
+        self.x = self.original_x = x
         self.y = self.original_y = y
         self.radius = radius
         self.x_vel = self.MAX_VEL # initial x-velocity flying to the right
