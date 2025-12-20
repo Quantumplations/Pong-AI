@@ -3,6 +3,7 @@ fitness_criterion     = max
 fitness_threshold     = 400
 pop_size              = 50
 reset_on_extinction   = False
+no_fitness_termination = False
 
 [DefaultStagnation]
 species_fitness_func = max
@@ -12,12 +13,20 @@ species_elitism      = 2
 [DefaultReproduction]
 elitism            = 2
 survival_threshold = 0.2
+min_species_size = 1
 
 [DefaultGenome]
 # node activation options
 activation_default      = relu
 activation_mutate_rate  = 1.0
 activation_options      = relu
+single_structural_mutation = False
+structural_mutation_surer = default
+bias_init_type = gaussian
+response_init_type = gaussian
+weight_init_type = gaussian
+enabled_rate_to_true_add = 0.0
+enabled_rate_to_false_add = 0.0
 
 # node aggregation options
 aggregation_default     = sum
